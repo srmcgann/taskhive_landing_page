@@ -36,14 +36,14 @@ function init(){
 		v[0].c.style.height="500px";
 		v[0].c.width = v[0].c.clientWidth;
 		v[0].c.height = v[0].c.clientHeight;
-		v[1].c.style.height="30vw";
-		v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;;
+		v[1].c.style.height="25vw";
+		v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;
 		v[1].vy=document.getElementsByClassName("rightDiv")[0].clientHeight/567*1.42;
 		v[1].c.width = v[1].c.clientWidth;
 		v[1].c.height = v[1].c.clientHeight;
 	}, true);
 	v[1].mapImg.addEventListener("load",function(){
-		v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;;
+		v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;
 		v[1].vy=document.getElementsByClassName("rightDiv")[0].clientHeight/567*1.42;
 		v[1].c.width = v[1].c.clientWidth;
 		v[1].c.height = v[1].c.clientHeight;
@@ -63,9 +63,9 @@ function init(){
 	v[1].c.style.height="500px";
 	v[1].c.width = v[1].c.clientWidth;
 	v[1].c.height = v[1].c.clientHeight;
-	v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;;
+	v[1].vx=document.getElementsByClassName("rightDiv")[0].clientWidth/951.5;
 	v[1].vy=document.getElementsByClassName("rightDiv")[0].clientHeight/567*1.42;
-	v[1].c.style.height="30vw";
+	v[1].c.style.height="25vw";
 	startStopAnimations();
 }
 
@@ -98,12 +98,12 @@ function drawMapAnimation(v){
 				x2=v[1].p[j].x*v[1].vx;
 				y2=v[1].p[j].y*v[1].vy;
 				d=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-				if(d<165*v[1].vx){
+				if(d<130*v[1].vx){
 					x.beginPath();
 					x.moveTo(x1,y1);
 					x.lineTo(x2,y2);
-					x.lineWidth=1+6/(1+d/10)*v[1].vx;
-					x.strokeStyle=`hsla(${v[1].f*9+j},100%,80%,${(1 - Math.pow(d / 165 * v[1].vx , .9))/ (300+Math.sin(v[1].f/75+(j+i))*299)}`;
+					x.lineWidth=1+6/(1+d/8)*v[1].vx;
+					x.strokeStyle=`hsla(${v[1].f*9+j},100%,80%,${(1 - Math.pow(d / 130 * v[1].vx , .9))/ (300+Math.sin(v[1].f/75+(j+i))*299)}`;
 					x.stroke();
 				}
 			}
@@ -133,7 +133,7 @@ function drawPointAnimation(v){
 	var X1,Y1,X2,Y2;
 	v[0].f+=.7;
 	for(var i=0;i<cx*2+60;i+=15){
-		x.strokeStyle=`hsla(${220},95%,60%,${i%60?.05:.10})`;
+		x.strokeStyle=`hsla(206,95%,60%,${i%60?.05:.10})`;
 		X1=-60+i+v[0].f;
 		Y1=0;
 		X2=X1;
@@ -144,7 +144,7 @@ function drawPointAnimation(v){
 		x.stroke();
 	}
 	for(var i=0;i<cy*2+60;i+=15){
-		x.strokeStyle=`hsla(${220},95%,60%,${.02+i%60/150})`;
+		x.strokeStyle=`hsla(206,95%,60%,${.02+i%60/150})`;
 		X1=0;
 		Y1=-60+i;
 		X2=cx*2;
@@ -160,7 +160,7 @@ function drawPointAnimation(v){
 		for(var i=0;i<cy*2+60;i+=15){
 			a=rand(t-Math.round((cy*2+60)*4/15-cy%2+3)*v[0].t);
 			if(a&&a<.045){
-				x.fillStyle=`hsla(${220},95%,60%,${a*3})`;
+				x.fillStyle=`hsla(206,95%,60%,${a*3})`;
 				X1=-60+j+v[0].f;
 				Y1=-60+i;
 				x.fillRect(X1,Y1,15,15);
@@ -190,7 +190,7 @@ function drawPointAnimation(v){
 					x.moveTo(x1,y1);
 					x.lineTo(x2,y2);
 					x.lineWidth=1+10/(1+d/10);
-					x.strokeStyle=`hsla(${225},100%,60%,${1 - Math.pow(d / 150, .85)})`;
+					x.strokeStyle=`hsla(206,100%,60%,${1 - Math.pow(d / 150, .85)})`;
 					x.stroke();
 				}
 			}
