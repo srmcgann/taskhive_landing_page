@@ -35,7 +35,7 @@ html,body{
 	width:100%;
 	top:50%;
 	height:100vh;
-	transform:translateY(-50%);
+	transform:translateY(-53%);
 	background:url(taskhive-symbol-yellow.svg) no-repeat center;
 	background-size:628px;
 }
@@ -43,7 +43,7 @@ html,body{
 .headerText{
 	position:absolute;
 	top:50%;
-	transform:translateY(-120px);
+	transform:translateY(-170px);
 	width:100%;
 	font-family:UnGraphicBold;
 	font-size:6.5em;
@@ -54,7 +54,7 @@ html,body{
 .headerText2{
 	position:absolute;
 	top:50%;
-	transform:translateY(-8px);
+	transform:translateY(-45px);
 	font-size:1.6em;
 	width:100%;
 	text-align:center;
@@ -64,7 +64,7 @@ html,body{
 	position:absolute;
 	width:100%;
 	top:50%;
-	transform:translateY(135px);
+	transform:translateY(115px);
 	font-size:.8em;
 	height:3.7em;
 	width:100%;
@@ -79,7 +79,7 @@ html,body{
 .downloadButtonDiv{
 	position:absolute;
 	top:50%;
-	transform:translateY(40px);
+	transform:translateY(10px);
 	width:100%;
 	text-align:center;
 }
