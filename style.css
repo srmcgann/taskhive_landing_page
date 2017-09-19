@@ -34,7 +34,7 @@ html,body{
 	position:absolute;
 	width:100%;
 	top:50%;
-	height:100vh;
+	height:120vh;
 	transform:translateY(-53%);
 	background:url(taskhive-symbol-yellow.svg) no-repeat center;
 	background-size:628px;
